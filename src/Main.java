@@ -6,6 +6,10 @@ public class Main
 
         MergeSort sort = new MergeSort(unsorted);
 
+        //printing
+        System.out.println("Before Sorting: ");
+        sort.toString(sort.head);
+
     }
 }
 
@@ -19,7 +23,7 @@ class Node
     }
 }
 
-class Merge 
+class MergeSort
 {
     public Node head;
     private Node tail;
@@ -34,6 +38,21 @@ class Merge
                 head = newNode;
                 tail = newNode;
             }
+            else
+            {
+                Node newNode = new Node(a);
+                tail.next = newNode;
+                tail = newNode;
+            }
         }
+    }
+
+    public void toString(Node input)
+    {
+        for(; input != null; input = input.next)
+        {
+            System.out.print(input.data + " ");
+        }
+        System.out.println();
     }
 }
