@@ -1,3 +1,6 @@
+// Ethan. T. Jordan
+// Merge Sort
+
 public class Main 
 {
     public static void main(String[] args) throws Exception 
@@ -124,7 +127,5 @@ class MergeSort
             System.out.print(input.data + " ");
         }
         System.out.println();
-    }
-
-    
+    }   
 }
